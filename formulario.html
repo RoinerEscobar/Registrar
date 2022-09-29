@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+        #imgRegistro {
+            width: 10%;
+            padding-top: 20px;
+            align-self: center;
+        }
+
+        #top {
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="top" class="container">
+        <div class="card mb-3">
+            <center>
+                <div class="card-header">REGISTRATE</div>
+            </center>
+            <img id="imgRegistro" src="img/registro.png" class="" alt="sesion">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <label for="exampleInputEmail1" class="form-label">Cedula</label>
+                        <input class="form-control  m-1 float-left" placeholder="Ingrese su cedula" type="number"
+                            onkeydown="javascript: return event.keyCode == 190 ? false : true && event.keyCode == 69 ? false : true && event.keyCode == 187 ? false : true && event.keyCode == 189 ? false : true && event.keyCode == 186 ? false : true "  id="cedula">
+                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                        <input class="form-control m-1 float-left" placeholder="Ingrese su nombre" type="text"
+                            id="nombre">
+                        <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                        <input class="form-control m-1 float-left" placeholder="Ingrese su apellido" type="text"
+                            id="apellido">
+                        <label for="exampleInputEmail1" class="form-label">Telefono</label>
+                        <input class="form-control m-1 float-left" placeholder="Ingrese su telefono" type="text"
+                            id="telefono">
+                        <button id="top" class="btn btn-outline-danger" onclick="registrar()">Registrar</button>
+                        <button id="top" class="btn btn-outline-primary " onclick="listar()">Listar</button>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input class="form-control  m-1 float-left" placeholder="name@example.com" type="email"
+                            id="email">
+                        <label for="exampleInputEmail1" class="form-label">Barrio</label>
+                        <input class="form-control m-1 float-left" placeholder="Ingrese su barrio" type="text"
+                            id="barrio">
+                        <label for="exampleInputEmail1" class="form-label">Direccion</label>
+                        <input class="form-control m-1 float-left" placeholder="Ingrese su direccion" type="text"
+                            id="direccion">
+                        <label for="exampleInputEmail1" class="form-label">Sexo</label>
+                        <select id="sexo" class="form-select m-1" aria-label="Default select example">
+                            <option selected>Masculino</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Otro</option>
+
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-2 col-2">
+            <table class="table table-hover table-primary">
+                <thead>
+
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Barrio</th>
+                    <th>Direccion</th>
+                    <th>Sexo</th>
+                </thead>
+                <tbody id="tusuarios">
+
+
+                </tbody>
+            </table>
+        </div>
+        </div>
+        
+    </div>
+    <script src="./js.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
